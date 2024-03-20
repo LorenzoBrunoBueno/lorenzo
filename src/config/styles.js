@@ -9,6 +9,9 @@ const styles = StyleSheet.create({
   selfStrech: {
     alignSelf: "strech",
   },
+  ScrollView: {
+    marginHorizontal: 20,
+  }
 });
 
 export default styles;
