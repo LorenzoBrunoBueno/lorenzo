@@ -3,9 +3,31 @@ import { Button, View } from "react-native";
 import { Image } from "expo-image";
 import { Text } from "react-native-paper";
 import styles from "../config/styles";
+import { useEffect, useState } from "react";
 
 export default function HomeScreen({}) {
+  // declaração de um estado que é uma variável
+  const [contador, setContador] = useState(1);
   const navigation = useNavigation();
+  // função que eu criei pra mostrar o contador
+  function mostraValorContador(){
+    console.log(contador);
+  }
+  
+  // função identica a de cima
+  const mostraValor = () => {
+    console.log(contador);
+  };
+
+  useEffect(mostraValor, [contador]);
+
+  //o cara que está escutando a variável stalker
+  useEffect(mostraValorContador, [contador])
+
+  useEffect(() => {
+    console.log("ENTREI");
+  }, []);
+
   return (
     <View style={styles.container}>
       {/* note que aqui estamos usando o TEXT de Native Paper*/}
@@ -19,6 +41,10 @@ export default function HomeScreen({}) {
       <Button
         onPress={() => navigation.navigate("SobreScreen")}
         title="Ir para sobre"
+      />
+      <Button
+        onPress={() => setContador(contador + 1)}
+        title="Aumenta Contador"
       />
     </View>
   );
