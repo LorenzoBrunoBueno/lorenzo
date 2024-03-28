@@ -54,7 +54,7 @@ function TabNavigator() {
         component={TempoScreen}
         options={{
           title: "Tempo",
-          tabBarIcon: "wather-sunny",
+          tabBarIcon: "weather-sunny",
         }}
       />
       <Tab.Screen

@@ -5,7 +5,7 @@ import { Text } from "react-native-paper";
 import styles from "../config/styles";
  
 const API = "58f0cf79195fef97df91af42c5973568";
-const cidade = "Joinville"
+const cidade = "Blumenau"
 const URL = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${API}&units=metric`;
  
 export default function TempoScreenAula() {
